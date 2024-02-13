@@ -1,0 +1,124 @@
+body {
+    background: radial-gradient(circle, aqua, black);
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+}
+
+.nav {
+    background-color: #000;
+}
+
+.nav .nav-item .nav-link {
+    color: aqua;
+    
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.nav-item {
+    padding-left: 50px;
+}
+
+.nav-item .nav-link.active {
+    color: white;
+    background-color: #000;
+}
+
+.nav-item .nav-link {
+    color: aqua;
+}
+
+.nav-item .nav-link:hover {
+    color: white;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin-top: 10px;
+   
+}
+
+.dropdown button {
+    background: #000;
+    color: aqua;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown button:hover {
+    color: white;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 110px;
+    padding-top: 5px;
+    z-index: 2;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 10px 13px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.container {
+    margin-top: 5%;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    overflow-x: auto; 
+}
+
+.card {
+    width: 30%;
+    min-width: 300px; 
+}
+
+.card .card-title {
+    font-variant: small-caps;
+}
+
+
+@media (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+    .nav {
+        flex-direction: column;
+        padding: 5px;
+    }
+    .container {
+        flex-wrap: wrap;
+        justify-content: flex-start; /
+    }
+}
+
+
+@media (max-width: 480px) {
+    body {
+        font-size: 12px;
+    }
+    .container {
+        flex-direction: column; 
+        gap: 0; 
+        justify-content: center; 
+        overflow-x: hidden; 
+    }
+    .card {width: 90%; 
+    }
+}
